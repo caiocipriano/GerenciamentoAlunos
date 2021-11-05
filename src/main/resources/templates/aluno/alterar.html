@@ -55,7 +55,7 @@
 		<!-- Status -->
 		<div class = "row">
 		<div class="col-md-6 form-group offset-md-3">
-			<label>Selecione o Status:</label>
+			<label>Status:</label>
 			<select class="form-control" th:field="*{status}">
 				<option th:each="status : ${T(br.com.academy.enums.Status).values()}" th:value="${status}" th:text="${status}"></option>
 			</select>
