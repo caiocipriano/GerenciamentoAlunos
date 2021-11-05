@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang = "pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="widht=device-widht, initial-scale=1.0">
+<link rel = "stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<title>Projeto SpringBoot</title>
+<meta name="author" content="CaioCipriano"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+</head>
+
+<body>
+
+	<header th:fragment = "cabecalho">
+	
+		<nav class="navbar navbar-expand-lg navbar-dark" style ="background-color:#008080">
+				<a class="navbar-brand" th:href="@{/}"> <!--  Thymeleaf retorna a função do controlller -->
+					 <img src="/img/minhalogo.png" width="90px" height="90px"/>
+				</a>
+				
+				
+		 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMobile">
+		 			<span class="navbar-toggler-icon"></span>
+		 		</button>
+		 		
+		 		<div id="navMobile" class="navbar-collapse collapse justify-content-end">
+		 			<a class="btn-nav nav-item nav-link"><i class="fas fa-home"></i> Home</a>
+		 			<a class="btn-nav nav-item nav-link" th:href="@{/inserir}"><i class="fas fa-user-graduate"></i> Cadastrar Aluno</a>
+		 			<a class="btn-nav nav-item nav-link"><i class="fas fa-search"></i> Pesquisar Aluno</a>
+		 			<a class="btn-nav nav-item nav-link btn-danger"><i class="fas fa-times"></i> Sair</a>
+		 		</div>
+	 	</nav>
+ 	</header>
+ 	
+ 	
+ 	
+		<!--Cabeçalho com Nomelcatura do Thymeleaf -->	
+		<!-- Fragment vai rpedir part do código, cabeçalho e rodapé -->
+	<footer th:fragment = "rodape">
+			<div class="rodape">
+				<span>Todos Direitos Reservados - 2021 &copy; Caio Cipriano</span>
+			</div>
+	</footer>
+
+
+
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/booststrap.min.js"></script>
+	
+	
+	
+</body>
+</html>

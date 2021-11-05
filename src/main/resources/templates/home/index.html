@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang = "pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta name = "viewport" content ="widht=device-widht, initial-scale=1.0">
+<link rel = "stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
+<title>Projeto SpringBoot</title>
+<meta name="author" content="CaioCipriano"/>
+<link rel="stylesheet" href="css/style.css">
+<script src="https://kit.fontawesome.com/006642858d.js"></script>
+</head>
+<body>
+
+	<div th:replace = "fragments/fragmentos :: cabecalho"></div>
+ 	
+	 <section class="neo-section" style="background-image:url('img/escolabck2.png');">
+		
+		<div class="sombra"></div>
+		 	
+		 		
+		 	<div class="center neo-container">
+		 			<h1 class="texto-centro">Sistema de Gerenciamento de Alunos</h1>
+		 	
+			 	<div class="botoes"></div>
+			 	
+			 	
+			 	
+			 	<div class="wm">
+			 		<h5 class="btn">Cadastrar Aluno</h5>
+			 	</div>
+			 	
+			 	
+			 	
+			 	 <div class="wm">
+			 	 	 <h5 class="btn justify-content-center">Encontrar Aluno</h5>
+			 	 </div>
+		 	 
+		 
+		 	
+		 	   <div class="clear"></div>
+		 	</div>
+		 	
+	</section>
+	
+	<div th:replace = "fragments/fragmentos :: rodape"></div>
+	
+	
+	
+	<script src="/webjars/jquery/3.5.1/jquery.min.js"></script>
+	<script src="/webjars/bootstrap/js/booststrap.min.js"></script>
+	
+	
+	
+</body>
+</html>
