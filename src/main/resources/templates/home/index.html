@@ -29,8 +29,6 @@
 			 		<h5 class="btn">Cadastrar Aluno</h5>
 			 	</div>
 			 	
-			 	
-			 	
 			 	 <div class="wm">
 			 	 	 <h5 class="btn justify-content-center">Encontrar Aluno</h5>
 			 	 </div>
@@ -41,6 +39,33 @@
 		 	</div>
 		 	
 	</section>
+	
+	<!-- Inicio Modal -->
+	
+	<div class="modal fade" id="modalPesquisa">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Encontre um aluno</h5>
+					<button type="button" class="close" data-dismiss="modal">
+						<span>&times;</span>
+					</button>
+				</div>
+				<form method="post" action="pesquisar-aluno" th:object="${aluno}">
+					<div class="modal-body">
+						<input type = "text"  placeholder="Digite o nome do aluno..."th:field="*{nome}" class="form-control">
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-dismiss ="modal">Fechar</button>
+						<button type="submit" class="btn btn-success">Pesquisar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+	
 	
 	<div th:replace = "fragments/fragmentos :: rodape"></div>
 	
