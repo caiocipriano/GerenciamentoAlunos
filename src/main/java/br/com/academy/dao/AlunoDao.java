@@ -22,7 +22,7 @@ public interface AlunoDao extends JpaRepository<Aluno, Integer> {
 	  @Query("SELECT o FROM Aluno o WHERE o.status = 'TRANCADO'")
 	  public List<Aluno>findByStatusTrancados();
 	 
-	  
+	  public List<Aluno>findByNomeContainingIgnoreCase(String nome);  ///Método do JPQL contém LIKE
 	  
 	 
 }

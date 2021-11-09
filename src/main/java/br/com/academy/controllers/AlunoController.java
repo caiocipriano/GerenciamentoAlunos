@@ -129,8 +129,10 @@ public class AlunoController {
 		if(nome == null  || nome.trim().isEmpty()) {
 			listaAlunos = alunoRepositorio.findAll();
 		}else {
-			
+			listaAlunos = alunoRepositorio.findByNomeContainingIgnoreCase(nome);
 		}
+		mv.addObject("ListaDeAlunos", listaAlunos);
+		mv.setViewName("Aluno/Pesquisa-resultado");
 		return mv;
 	}
 	
