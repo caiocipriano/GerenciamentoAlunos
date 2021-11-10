@@ -21,10 +21,10 @@
 			<form method="post">
 				<div style="width:70em" >
 			
-					<input class="form-control" placeholder="Busque por alunos...">
+					<input th:object="${aluno}" data-toggle="modal" data-target="#pesquisa" class="form-control" placeholder="Busque por alunos...">
 					&nbsp;
 						<div class="input-group-append">
-						<a  data-toggle="modal" data-target="#pesquisa">
+						<a  data-target="#pesquisa" th:object="${aluno}">
 							<button type="submit" class="btn btn-outline-secondary" style="color:black; width:100px">Pesquisar</button></a>
 						</div>
 				</div>

@@ -33,6 +33,15 @@ public class AlunoController {
 		return mv;
 	}
 	
+	@GetMapping("/filtroAlunos")
+	public ModelAndView listagem(){
+		ModelAndView mv = new ModelAndView();			
+		mv.setViewName("Aluno/filtroAlunos");
+		
+		return mv;
+		
+	}
+	
 	@PostMapping("/IstAlunos")
 	public ModelAndView inserirAluno(@Valid Aluno aluno, BindingResult br ) {
 		ModelAndView mv = new ModelAndView();
@@ -132,9 +141,9 @@ public class AlunoController {
 			listaAlunos = alunoRepositorio.findByNomeContainingIgnoreCase(nome);
 		}
 		mv.addObject("ListaDeAlunos", listaAlunos);
-		mv.setViewName("Aluno/Pesquisa-resultado");
+		mv.setViewName("Aluno/pesquisa-resultado");
 		return mv;
 	}
 	
-	
+
 }
