@@ -1,5 +1,5 @@
 # Gerenciamento de Alunos
-Este projeto tem como objetivo, por em prática os estudos e ter como portifólio pessoal!
+Este projeto teve como base, por em prática os estudos e ter como portifólio pessoal!
 
 <p>Linkedln:www.linkedin.com/in/caio-cipriano
 <h2>Sobre:</h2>
