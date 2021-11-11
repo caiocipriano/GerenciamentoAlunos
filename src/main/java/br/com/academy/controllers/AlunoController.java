@@ -33,9 +33,10 @@ public class AlunoController {
 		return mv;
 	}
 	
+	
 	@GetMapping("/filtroAlunos")
 	public ModelAndView listagem(){
-		ModelAndView mv = new ModelAndView();			
+		ModelAndView mv = new ModelAndView();			//Move para VIEW que contém o filtro de alunos
 		mv.setViewName("Aluno/filtroAlunos");
 		
 		return mv;
@@ -94,9 +95,12 @@ public class AlunoController {
 		return mv;
 	}
 	
+	
+	//View que contém query filtrando por Status
+	
 	@GetMapping("alunos-ativos")
 	public ModelAndView listagemAtivos(){
-		ModelAndView mv = new ModelAndView();			
+		ModelAndView mv = new ModelAndView();									
 		mv.setViewName("Aluno/alunos-ativos");
 		mv.addObject("alunosAtivos", alunoRepositorio.findByStatusAtivos());
 		return mv;
@@ -130,6 +134,10 @@ public class AlunoController {
 		return mv;
 		
 	}
+	
+	
+	//--------------------------------------------------------------------
+	
 	
 	@GetMapping("pesquisar-aluno")
 	public ModelAndView pesquisarAluno(@RequestParam(required=false)String nome) {
