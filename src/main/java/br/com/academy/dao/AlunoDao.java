@@ -4,12 +4,13 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 
 import br.com.academy.model.Aluno;
+
 import java.util.List;
 
 public interface AlunoDao extends JpaRepository<Aluno, Integer> {
 			
-	
-	
+	  Aluno findById(long id);
+
 	  @Query("SELECT c FROM Aluno c WHERE c.status = 'ATIVO'")
 	  public List<Aluno>findByStatusAtivos();
 	  

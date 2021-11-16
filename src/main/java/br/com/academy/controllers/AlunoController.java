@@ -17,6 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 import br.com.academy.dao.AlunoDao;
 import br.com.academy.model.Aluno;
 
+
 @Controller
 public class AlunoController {
 		
@@ -87,7 +88,15 @@ public class AlunoController {
 		alunoRepositorio.deleteById(id);
 		return "redirect:/alunos-adicionados";
 	}
-		
+	
+	@GetMapping("/encontrar/{id}")
+	public ModelAndView encontraAluno(@PathVariable("id") Integer id) {
+		ModelAndView mv = new ModelAndView();
+		mv.setViewName("Aluno/aluno-encontrado");
+		mv.addObject("alunosEncontrados", alunoRepositorio.findById(id));        	
+		return mv;
+	}
+	
 	@GetMapping("filtro-alunos")
 	public ModelAndView filtroAlunos() {
 		ModelAndView mv = new ModelAndView(); //Retorna pagina com alunos ativos	
@@ -124,6 +133,7 @@ public class AlunoController {
 		return mv;
 		
 	}
+	
 	
 	
 	@GetMapping("alunos-trancados")

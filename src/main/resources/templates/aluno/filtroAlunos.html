@@ -18,21 +18,22 @@
 			<hr>
 			<br>
 			
-			<form method="post">
+			<!-- <form method="post">
 				<div style="width:70em" >
 			
-					<input th:object="${aluno}" data-toggle="modal" data-target="#pesquisa" class="form-control" placeholder="Busque por alunos...">
+					<input th:object="${aluno}" data-toggle="modal" data-target="#pesquisa" 
+					class="form-control" placeholder="Busque por alunos...">
 					&nbsp;
 						<div class="input-group-append">
-						<a  data-target="#pesquisa" th:object="${aluno}">
-							<button type="submit" class="btn btn-outline-secondary" style="color:black; width:100px">Pesquisar</button></a>
+						<a>
+							<button type="submit" class="btn btn-outline-secondary" 
+								style="color:black; width:100px">Pesquisar</button></a>
 						</div>
 				</div>
-			</form>
+			</form> -->
 			
-			<br>
+
 			
-		  <hr>
 		<div class= "row">
 		
 			<!--Alunos Ativos-->				
@@ -53,7 +54,7 @@
 					<div class = "card-body">
 						<h5 class=" card-title"> Alunos Inativos no Sistema</h5>
 							<p class="card-text"> Busque por alunos inativos no sistema!</p>
-							<a th:href="@{/alunos-ativos}" class="btn btn-outline-primary" style="width:200px;color:black">Clique aqui!</a>
+							<a th:href="@{/alunos-inativos}" class="btn btn-outline-primary" style="width:200px;color:black">Clique aqui!</a>
 					</div>
 				</div>
 				 &nbsp; &nbsp; &nbsp;
